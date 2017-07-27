@@ -17,7 +17,7 @@ export default class BarChartContainer extends Component {
     render() {
         return (
             <div>
-                <BarChart data={this.loadData()} size={ {width: "400", height: "100"} } />
+                <BarChart data={this.loadData()} size={ {width: "200", height: "100"} } legend={dataJson.description}/>
             </div>
         )
     }
@@ -87,11 +87,12 @@ class BarChart extends Component {
                     text: 'US Gross Domestic Product'
                 }
             }
-        });           
+        });
     }
     
     render() {
         const { width, height } = this.props.size;
+        console.log(width, height);
 
         return  (
             <div>
@@ -102,7 +103,7 @@ class BarChart extends Component {
                 height={height}
                 ></canvas>
                 <div className="legend">
-                    Units: Billions of Dollars Seasonal Adjustment: Seasonally Adjusted Annual Rate Notes: A Guide to the National Income and Product Accounts of the United States (NIPA) - (http://www.bea.gov/national/pdf/nipaguid.pdf)
+                    {this.props.legend}
                 </div>
             </div>
         
