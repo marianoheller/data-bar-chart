@@ -1,4 +1,30 @@
-.legend {
-    font-size: small;
-    color: grey;
+svg {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#title {
+	font-size: 1.5em;
+}
+
+.bar {
+	fill: rgba(0,130,210, 0.75);
+	stroke: rgb(0,130,210);
+}
+
+.bar:hover {
+	fill: rgba(0,105,170, 0.75);
+	stroke: rgb(0,105,170);
+}
+
+li {
+	list-style-type: none;
+}
+
+.d3-tip {
+	border-radius: 4px;
+	background-color: rgba( 0, 0, 0, 0.7);
+	padding: 5px;
+	color: white;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
 }
